@@ -101,7 +101,7 @@ body {
       background: #fff;
       border-radius: 20px;
       max-width: 379px;
-      padding: 39px 23px 24px 23px;
+      padding: 26px 23px;
       margin: 0 auto;
       // margin-bottom: 228px;
    }
@@ -126,6 +126,8 @@ body {
 
    &__messages {
       margin: 0 auto;
+      max-width: 413px;
+      width: 100%;
    }
 
    &__calendar {
@@ -139,7 +141,7 @@ body {
 }
 
 .header-form {
-   &__title {
+   &__btn {
       font-family: var(--font-family);
       font-weight: 400;
       font-size: 16px;
@@ -150,64 +152,11 @@ body {
       justify-content: center;
       gap: 9px;
       margin-bottom: 19px;
-   }
-
-   &__subtitle {
-      position: relative;
-      font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 140%;
-      color: #53575a;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
-      &::after {
-         content: '';
-         position: absolute;
-         top: 50%;
-         left: 0;
-         background-color: #d4e6f0;
-         height: 2px;
-         width: 151px;
-      }
-      &::before {
-         content: '';
-         position: absolute;
-         top: 50%;
-         right: 0;
-         background-color: #d4e6f0;
-         height: 2px;
-         width: 151px;
-      }
-   }
-
-   &__input {
       border: 0.81px solid #d4e6f0;
       border-radius: 8px;
-      padding: 13.7px;
-      margin-bottom: 15px;
-      input {
-         border: none;
-         outline: none;
-         font-family: var(--font-family);
-         font-weight: 400;
-         font-size: 16px;
-         line-height: 140%;
-         color: #53575a;
-         &::placeholder {
-            font-family: var(--font-family);
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 140%;
-            color: #bfd3de;
-         }
-      }
+      padding: 12px;
    }
 
-   &__btn {
-      margin-bottom: 18px;
-   }
    &__description {
       font-family: var(--font-family);
       font-weight: 400;
@@ -297,6 +246,8 @@ body {
 
    &__sunbtitle {
       margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 140%;
    }
 
    &__input {
@@ -304,6 +255,7 @@ body {
 
       padding: 22px 0;
       display: flex;
+
       label {
          font-family: var(--font-family);
          font-weight: 400;
@@ -321,6 +273,8 @@ body {
 
    &__btn {
       max-width: 242px;
+      padding: 12px 0;
+      margin-top: 8px;
    }
 }
 .smart {
@@ -330,17 +284,25 @@ body {
       justify-content: space-between;
    }
    &__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 130%;
       margin-bottom: 20px;
    }
 
    &__subtitle {
-      margin-bottom: 6px;
+      margin-bottom: 30px;
       max-width: 586px;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
    }
 
    &__list {
+      margin-bottom: 8px;
       li {
          padding: 22px 0;
+         color: #939ba0;
          h6 {
             font-family: var(--font-family);
             font-weight: 600;
@@ -368,6 +330,7 @@ body {
 
    &__btn {
       max-width: 212px;
+      padding: 12px 0;
    }
 
    &__card {
@@ -411,13 +374,13 @@ body {
 
    &__decor-quotation {
       position: absolute;
-      top: -37px;
-      right: 43px;
+      top: -25px;
+      right: 40px;
    }
 }
 
 .integrations {
-   margin-bottom: 180px;
+   margin-bottom: 157px;
    &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -427,20 +390,24 @@ body {
    &__columns {
       display: flex;
       gap: 20px;
-      width: 100%;
+      // width: 100%;
    }
    &__column {
-      min-width: 182px;
+      // min-width: 182px;
    }
    &__column--margin-top {
-      margin-top: 20px;
+      margin-top: 70px;
    }
    &__title {
       margin-bottom: 20px;
+      margin-top: -14px;
    }
 
    &__subtitle {
       margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 150%;
+      color: #5a6770;
    }
 
    &__btn {
@@ -448,36 +415,47 @@ body {
    }
 }
 .integrations-item {
-   width: 182;
+   width: 182px;
    height: 189px;
+   margin-bottom: 20px;
    display: flex;
-   flex-direction: column;
+   // flex-direction: column;
    justify-content: center;
    align-items: center;
 
    text-align: center;
    box-shadow: 0 24px 41px -16px rgba(47, 45, 86, 0.1);
    border-radius: 9px;
-   padding: 30px 0;
+   // padding: 30px 0;
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
    &__img {
       width: 50px;
+      // margin-bottom: 15px;
    }
 
    &__title {
       font-family: var(--font-family);
       font-weight: 400;
-      font-size: 20px;
-      line-height: 140%;
+      font-size: 18px;
+      line-height: 130%;
       text-align: center;
       color: #505050;
       max-width: 115px;
+      margin-top: 15px;
    }
 
    &__logos {
+      display: grid;
+      grid-template-columns: 30px 30px;
+      gap: 7px;
    }
 }
 .accolades {
-   margin-bottom: 180px;
+   margin-bottom: 189px;
    &__title {
       margin-bottom: 60px;
       display: flex;
@@ -485,7 +463,11 @@ body {
    }
    &__columns {
       display: flex;
-      justify-content: center;
+      // justify-content: center;
+      // justify-content: space-between;
+      // max-width: 500px;
+      margin: 0 auto;
+      margin-left: 94px;
    }
 }
 .accolades-item {
@@ -493,10 +475,15 @@ body {
    flex-direction: column;
    align-items: center;
 
-   padding: 0 87px;
+   // padding: 0 87px;
    &:not(:last-child) {
       border-right: 1px solid #28445d;
-      // margin-right: 87px;
+      margin-right: 80px;
+      padding-right: 91px;
+   }
+   &:first-child {
+      padding: 0 87px;
+      margin-right: 87px;
    }
    &__img {
    }
@@ -518,11 +505,14 @@ body {
    }
 
    &__subtitle {
-      // white-space: nowrap;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 122%;
+      color: #5a6770;
    }
 }
 .plans {
-   margin-bottom: 180px;
+   margin-bottom: 176px;
    &__btn {
       max-width: 212px;
       margin: 0 auto;
@@ -543,6 +533,7 @@ body {
 
    &__columns {
       display: flex;
+      justify-content: center;
       gap: 30px;
       margin-bottom: 60px;
    }
@@ -554,9 +545,10 @@ body {
    box-shadow:
       0 24px 41px -16px rgba(47, 45, 86, 0.1),
       0 -16px 40px -36px rgba(47, 45, 86, 0.1);
-   padding: 33px 30px;
+   padding: 33px 30px 26px 30px;
    display: flex;
    flex-direction: column;
+   max-width: 309px;
    &__title {
       font-family: var(--second-family);
       font-weight: 700;
@@ -576,11 +568,20 @@ body {
    }
 
    &__list {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
       li {
          display: flex;
          gap: 6px;
          margin-bottom: 10px;
+         font-family: var(--font-family);
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 140%;
+         svg {
+            width: 30px;
+            height: 30px;
+            margin-top: -7px;
+         }
       }
    }
 
@@ -607,7 +608,7 @@ body {
 .faq {
    margin-bottom: 180px;
    &__title {
-      margin-bottom: 60px;
+      margin-bottom: 32px;
       display: flex;
       justify-content: center;
       text-align: center;
@@ -636,6 +637,7 @@ body {
 
    &__body {
       display: none;
+      max-width: 858px;
    }
 }
 .accordion-item.active .accordion-item__body {
@@ -681,7 +683,7 @@ body {
    }
 }
 .navigation {
-   margin-bottom: 21px;
+   margin-bottom: 13px;
    &__wrapper {
       display: flex;
       flex-direction: column;
@@ -690,6 +692,10 @@ body {
 
    &__list {
       display: flex;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
       li {
          margin-right: 40px;
       }
@@ -700,16 +706,27 @@ body {
          margin-left: 44px;
       }
    }
-
+   &__list--top {
+      margin-left: 49px;
+   }
+   &__list--bottom {
+      font-size: 12px;
+   }
    &__img {
       margin-bottom: 58px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-left: -37px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
    }
 
    &__img--logo {
+      width: 47px;
+      margin-bottom: 10px;
    }
 
    &__img--title {
@@ -720,4 +737,10 @@ body {
    border-top: 1px solid #d6dee1;
    display: flex;
    justify-content: center;
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 140%;
+   text-align: center;
+   color: #a5adb3;
 }
