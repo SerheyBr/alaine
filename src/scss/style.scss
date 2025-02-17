@@ -1,8 +1,8 @@
 @use 'reset';
 
 body {
-   margin-top: 24px;
-   padding: 0 10px;
+   // margin-top: 24px;
+   // padding: 0 24px;
    font-family: var(--font-family);
    font-weight: 400;
    font-size: 18px;
@@ -57,9 +57,13 @@ body {
 }
 
 .header {
+   height: 100vh;
+
+   padding: 24px;
    margin-bottom: 180px;
    &__wrapper {
       display: flex;
+      height: 100%;
    }
 
    &__column {
@@ -71,7 +75,13 @@ body {
    }
    &__column--green {
       background: #e6f4f2;
-      padding: 188px 202px 160px 202px;
+      padding: 80px;
+      // padding: 188px 202px 160px 202px;
+
+      // padding: 0px 202px 0px 202px;
+      // display: flex;
+      // flex-direction: column;
+      // height: 100%;
    }
    &__logo {
       display: flex;
@@ -141,7 +151,7 @@ body {
       img {
          width: 100%;
          height: 100%;
-         object-fit: cover;
+         object-fit: fill;
       }
    }
 }
@@ -678,7 +688,7 @@ body {
          svg {
             width: 30px;
             height: 30px;
-            margin-top: -7px;
+            margin-top: -3px;
          }
       }
    }
@@ -690,6 +700,23 @@ body {
       font-size: 48px;
       line-height: 120%;
       color: #28445d;
+      margin-bottom: 12px;
+   }
+   &__btn {
+      padding: 12px 0;
+      &:hover {
+         background-color: rgba(40, 68, 93, 0.8);
+         color: #e6f4f1;
+      }
+   }
+   &__btn--white {
+      background-color: #e6f4f1;
+      color: #28445d;
+      // transition: all 0.4s;
+      &:hover {
+         background-color: rgba(230, 244, 241, 0.8);
+         color: #28445d;
+      }
    }
 }
 .plans-item--black {
